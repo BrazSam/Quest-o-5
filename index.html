@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>INDICE DE MASSA CORPORAL</title>
+  <script>
+    let nome = prompt("Qual seu nome? ");
+    let altura = parseFloat(prompt("Sua altura em cm: "));
+    let peso = parseFloat(prompt("Seu peso em kg: "));
+
+    altura = altura / 100;
+
+    let imc = peso / (altura * altura);
+    
+    let classificacao = "";
+
+    if (imc < 16) {
+      classificacao = "Baixo peso muito grave";
+    } else if (imc < 17) {
+      classificacao = "Baixo peso grave";
+    } else if (imc < 18.5) {
+      classificacao = "Baixo peso";
+    } else if (imc < 25) {
+      classificacao = "Peso normal";
+    } else if (imc < 30) {
+      classificacao = "Sobrepeso";
+    } else if (imc < 35) {
+      classificacao = "Obesidade grau I";
+    } else if (imc < 40) {
+      classificacao = "Obesidade grau II";
+    } else {
+      classificacao = "Obesidade grau III";
+    }
+
+    alert(`${nome}. Seu INDICE DE MASSA CORPORAL É ${imc}, sendo classificado como: ${classificacao}.`);
+  </script>
+</head>
+<body>
+</body>
+</html>
